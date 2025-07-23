@@ -60,3 +60,14 @@ def getpassword():
 
 
 print("helloword")
+
+def get_execution_time():
+    import time
+    start_time = time.time()
+    # Simulate some processing
+    time.sleep(2)  # Sleep for 2 seconds
+    end_time = time.time()
+    execution_time = end_time - start_time
+    return execution_time
+
+get_execution_time()
