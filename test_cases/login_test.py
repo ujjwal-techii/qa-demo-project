@@ -46,6 +46,7 @@ print("Testing 6A")
 
 def getusername():
     return "ujjwal_Thakur"
-
-
 getusername()
+
+def getpassword():
+    return "ujjwal1234"
