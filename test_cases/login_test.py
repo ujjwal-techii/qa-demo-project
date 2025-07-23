@@ -37,8 +37,6 @@ def getusername():
     return "ujjwal_Thakur"
 getusername()
 
-
-
 def getpassword():
     return "ujjwal_Thakur@123"
 getpassword()
