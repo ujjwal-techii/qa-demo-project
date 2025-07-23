@@ -65,3 +65,9 @@ def get_execution_time():
     return execution_time
 
 get_execution_time()
+
+
+
+
+for i in range(5):
+    print(f"Iteration {i+1}: {get_execution_time()} seconds")
