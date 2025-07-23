@@ -71,3 +71,6 @@ get_execution_time()
 
 for i in range(5):
     print(f"Iteration {i+1}: {get_execution_time()} seconds")
+
+def(sdjasjdk)
+print (ddddddddddddddddddd)
