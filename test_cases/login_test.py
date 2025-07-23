@@ -32,8 +32,7 @@ if response.status_code == 200 and "token" in response.json():
 else:
     print("❌ Login failed!")
 
-
- print ("Testing haseeb")
+print ("Testing haseeb")
 
 print("Testing haseeb")
 print("Testing haseeb")
