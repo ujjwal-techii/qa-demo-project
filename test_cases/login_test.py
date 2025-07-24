@@ -96,3 +96,13 @@ if __name__ == "__main__":
 
 def webapp():
     pass
+
+i = 2  # defined outside
+
+def whatsapp(a):
+    if i in a:
+        print("add")
+    else:
+        print("not found")
+
+whatsapp([1, 2, 3])  # Output: add
