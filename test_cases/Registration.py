@@ -31,3 +31,6 @@ if __name__ == "__main__":
         print("✅ Registration test passed")
     except AssertionError:
         print
+
+
+print("check on")
