@@ -5,7 +5,9 @@ import json
 from typing import List, Dict
 
 # Set up logging
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 
 # ------------------ Dummy Data Generator ------------------ #
@@ -14,14 +16,16 @@ class DummyDataGenerator:
         self.count = count
 
     def generate_user(self, id: int) -> Dict:
-        names = ['Alice', 'Bob', 'Charlie', 'David', 'Eva']
+        names = ["Alice", "Bob", "Charlie", "David", "Eva"]
         return {
             "id": id,
             "name": random.choice(names),
             "age": random.randint(18, 65),
             "email": f"user{id}@example.com",
             "is_active": bool(random.getrandbits(1)),
-            "roles": random.sample(["admin", "user", "editor", "viewer"], k=random.randint(1, 3))
+            "roles": random.sample(
+                ["admin", "user", "editor", "viewer"], k=random.randint(1, 3)
+            ),
         }
 
     def generate_users(self) -> List[Dict]:
@@ -62,7 +66,7 @@ class DummyAPI:
 # ------------------ File Operations ------------------ #
 def save_to_file(data, filename: str):
     try:
-        with open(filename, 'w') as file:
+        with open(filename, "w") as file:
             json.dump(data, file, indent=4)
         logging.info(f"Data saved to {filename}")
     except Exception as e:
@@ -71,7 +75,7 @@ def save_to_file(data, filename: str):
 
 def load_from_file(filename: str) -> List[Dict]:
     try:
-        with open(filename, 'r') as file:
+        with open(filename, "r") as file:
             data = json.load(file)
         logging.info(f"Data loaded from {filename}")
         return data

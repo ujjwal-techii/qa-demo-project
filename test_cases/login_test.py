@@ -9,13 +9,13 @@ users_db = {
     "admin@example.com": {
         "name": "Admin",
         "password": hashlib.sha256("admin123".encode()).hexdigest(),
-        "role": "admin"
+        "role": "admin",
     },
     "user@example.com": {
         "name": "User",
         "password": hashlib.sha256("user123".encode()).hexdigest(),
-        "role": "user"
-    }
+        "role": "user",
+    },
 }
 
 
@@ -25,7 +25,9 @@ def login(email, password):
     user = users_db.get(email)
 
     if user and user["password"] == hashed_password:
-        print(f"[SUCCESS] Welcome, {user['name']}! You are logged in as {user['role']}.")
+        print(
+            f"[SUCCESS] Welcome, {user['name']}! You are logged in as {user['role']}."
+        )
         return True
     else:
         print("[ERROR] Invalid email or password.")
@@ -38,14 +40,16 @@ products = [
     {"id": 101, "name": "Laptop", "price": 65000},
     {"id": 102, "name": "Mouse", "price": 700},
     {"id": 103, "name": "Keyboard", "price": 1500},
-    {"id": 104, "name": "Monitor", "price": 12000}
+    {"id": 104, "name": "Monitor", "price": 12000},
 ]
 
 
 def list_products():
     print("\nAvailable Products:")
     for product in products:
-        print(f" - ID: {product['id']} | Name: {product['name']} | Price: ₹{product['price']}")
+        print(
+            f" - ID: {product['id']} | Name: {product['name']} | Price: ₹{product['price']}"
+        )
 
 
 def add_product(name, price):
@@ -62,6 +66,7 @@ def delete_product(product_id):
 
 # --------------------- ADMIN DASHBOARD ---------------------
 
+
 def admin_panel():
     print("\n=== Admin Panel ===")
     list_products()
@@ -75,6 +80,7 @@ def admin_panel():
 
 
 # --------------------- MAIN FUNCTION ---------------------
+
 
 def main():
     print("=== Dummy App Login ===")
@@ -94,15 +100,19 @@ def main():
 if __name__ == "__main__":
     main()
 
+
 def webapp():
     pass
 
+
 i = 2  # defined outside
+
 
 def whatsapp(a):
     if i in a:
         print("add")
     else:
         print("not found")
+
 
 whatsapp([1, 2, 3])  # Output: add
