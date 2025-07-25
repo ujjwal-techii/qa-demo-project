@@ -1,5 +1,4 @@
 import hashlib
-import time
 import random
 
 
@@ -21,12 +20,13 @@ users_db = {
 
 def login(email, password):
     print(f"[INFO] Attempting login for {email}")
-    hashed_password = hashlib.sha256(password.encode()).hexdigest()
+    hashed_password = hashlib.sha256(password. encode()).hexdigest()
     user = users_db.get(email)
 
     if user and user["password"] == hashed_password:
         print(
-            f"[SUCCESS] Welcome, {user['name']}! You are logged in as {user['role']}."
+            f"[SUCCESS] Welcome, "
+            f"{user['name']}!"f" You are logged in as {user['role']}."
         )
         return True
     else:
@@ -48,7 +48,8 @@ def list_products():
     print("\nAvailable Products:")
     for product in products:
         print(
-            f" - ID: {product['id']} | Name: {product['name']} | Price: ₹{product['price']}"
+            f" - ID: {product['id']} | "
+            f"Name: {product['name']} | Price: ₹{product['price']}"
         )
 
 
@@ -92,7 +93,8 @@ def main():
             admin_panel()
         else:
             list_products()
-            print("[INFO] You can view products, but you don’t have admin rights.")
+            print("[INFO] You can view "
+                  "products, but you don’t have admin rights.")
     else:
         print("[EXIT] Login failed. Exiting...")
 
