@@ -1,3 +1,7 @@
+"""This module contains tests related to the login functionality.
+It includes various test cases for valid and invalid login scenarios.
+"""
+
 import random
 import time
 import logging
@@ -11,6 +15,14 @@ logging.basicConfig(
 
 
 # ------------------ Dummy Data Generator ------------------ #
+"""
+
+ This module contains tests related to the login functionality.
+ It includes various test cases for valid and invalid login scenarios.
+
+"""
+
+"""
 class DummyDataGenerator:
     def __init__(self, count: int):
         self.count = count
@@ -40,7 +52,8 @@ class DummyAPI:
     def create_user(self, user_data: Dict) -> Dict:
         logging.info(f"Creating user: {user_data['name']}")
         self.database[user_data["id"]] = user_data
-        return {"status": "success", "message": "User created", "user": user_data}
+        return {"status": "success", "message": "User created",
+                "user": user_data}
 
     def get_user(self, user_id: int) -> Dict:
         user = self.database.get(user_id)

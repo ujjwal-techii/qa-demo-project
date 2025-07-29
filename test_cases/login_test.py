@@ -1,3 +1,9 @@
+"""
+This module contains tests related to the login functionality.
+
+It includes various test cases for valid and invalid login scenarios.
+"""
+
 import hashlib
 import random
 
@@ -17,6 +23,10 @@ users_db = {
     },
 }
 
+"""
+Login file used
+"""
+
 
 def login(email, password):
     print(f"[INFO] Attempting login for {email}")
@@ -34,14 +44,12 @@ def login(email, password):
         return False
 
 
-# --------------------- PRODUCT MANAGEMENT ---------------------
-
+# --------------------- PRODUCT MANAGEMENT ---------
 products = [
     {"id": 101, "name": "Laptop", "price": 65000},
     {"id": 102, "name": "Mouse", "price": 700},
     {"id": 103, "name": "Keyboard", "price": 1500},
-    {"id": 104, "name": "Monitor", "price": 12000},
-]
+    {"id": 104, "name": "Monitor", "price": 12000},]
 
 
 def list_products():
@@ -111,10 +119,14 @@ i = 2  # defined outside
 
 
 def whatsapp(a):
+
     if i in a:
         print("add")
     else:
         print("not found")
 
+
+# Example global variable 'i'
+i = 2
 
 whatsapp([1, 2, 3])  # Output: add

@@ -1,23 +1,28 @@
 # qa-demo-project
-# Project Name
+# QA Automation for VMS Backend API
 
-A brief description of what your project does and its purpose.
+A demo automation framework built for testing the backend APIs of a Visitor Management System (VMS).  
+It covers authentication, user registration, login, token validation, and edge-case handling (like 429 rate limiting).
 
 ---
 
 ## 🚀 Features
 
-- Feature 1
-- Feature 2
-- Feature 3
+- ✅ Automated API test cases using `pytest`
+- 🔄 Retry mechanism for 429 (Too Many Requests)
+- 🔐 Token-based authentication testing
+- 📄 Session-level setup and teardown using fixtures
+- 📂 Credential handling with JSON persistence
+- 📊 Integration-ready with Jenkins for CI/CD
 
 ---
 
 ## 🛠 Tech Stack
 
-- Language/Framework: e.g., Python, Node.js, Java
-- Tools: Git, Docker, Postman, etc.
-- Database: MySQL, MongoDB, etc.
+- **Language/Framework**: Python 3.10, Pytest
+- **Tools**: Postman, Git, PyCharm, Jenkins
+- **Database**: SQLite (for dev), PostgreSQL (in prod)
+- **Libraries**: `requests`, `pytest`, `json`, `time`, `os`
 
 ---
 
@@ -26,5 +31,5 @@ A brief description of what your project does and its purpose.
 Clone the repo:
 
 ```bash
-git clone https://your-repo-url.git
-cd project-folder
+git clone https://github.com/example-user/qa-demo-project.git
+cd qa-demo-project
