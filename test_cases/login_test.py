@@ -91,6 +91,19 @@ def main():
         print("[EXIT] Login failed. Exiting...")
 
 
-if __name__ == "__main__":
-    main()
- 
+
+print("Testing 1")
+print("Testing 2")
+print("Testing 3")
+print("Testing 4")
+print("Testing 5")
+print("Testing 6")
+
+
+def getusername():
+    return "ujjwal_Thakur"
+getusername()
+
+def getpassword():
+    return "ujjwal_Thakur@123"
+getpassword()
