@@ -1,5 +1,11 @@
+
+"""
+This module contains tests related to the login functionality.
+
+It includes various test cases for valid and invalid login scenarios.
+"""
+
 import hashlib
-import time
 import random
 
 
@@ -9,43 +15,51 @@ users_db = {
     "admin@example.com": {
         "name": "Admin",
         "password": hashlib.sha256("admin123".encode()).hexdigest(),
-        "role": "admin"
+        "role": "admin",
     },
     "user@example.com": {
         "name": "User",
         "password": hashlib.sha256("user123".encode()).hexdigest(),
-        "role": "user"
-    }
+        "role": "user",
+    },
 }
+
+"""
+Login file used
+"""
 
 
 def login(email, password):
     print(f"[INFO] Attempting login for {email}")
-    hashed_password = hashlib.sha256(password.encode()).hexdigest()
+    hashed_password = hashlib.sha256(password. encode()).hexdigest()
     user = users_db.get(email)
 
     if user and user["password"] == hashed_password:
-        print(f"[SUCCESS] Welcome, {user['name']}! You are logged in as {user['role']}.")
+        print(
+            f"[SUCCESS] Welcome, "
+            f"{user['name']}!"f" You are logged in as {user['role']}."
+        )
         return True
     else:
         print("[ERROR] Invalid email or password.")
         return False
 
 
-# --------------------- PRODUCT MANAGEMENT ---------------------
-
+# --------------------- PRODUCT MANAGEMENT ---------
 products = [
     {"id": 101, "name": "Laptop", "price": 65000},
     {"id": 102, "name": "Mouse", "price": 700},
     {"id": 103, "name": "Keyboard", "price": 1500},
-    {"id": 104, "name": "Monitor", "price": 12000}
-]
+    {"id": 104, "name": "Monitor", "price": 12000},]
 
 
 def list_products():
     print("\nAvailable Products:")
     for product in products:
-        print(f" - ID: {product['id']} | Name: {product['name']} | Price: ₹{product['price']}")
+        print(
+            f" - ID: {product['id']} | "
+            f"Name: {product['name']} | Price: ₹{product['price']}"
+        )
 
 
 def add_product(name, price):
@@ -62,6 +76,7 @@ def delete_product(product_id):
 
 # --------------------- ADMIN DASHBOARD ---------------------
 
+
 def admin_panel():
     print("\n=== Admin Panel ===")
     list_products()
@@ -76,6 +91,7 @@ def admin_panel():
 
 # --------------------- MAIN FUNCTION ---------------------
 
+
 def main():
     print("=== Dummy App Login ===")
     email = input("Enter email: ")
@@ -86,9 +102,11 @@ def main():
             admin_panel()
         else:
             list_products()
-            print("[INFO] You can view products, but you don’t have admin rights.")
+            print("[INFO] You can view "
+                  "products, but you don’t have admin rights.")
     else:
         print("[EXIT] Login failed. Exiting...")
+
 
 
 
@@ -107,3 +125,48 @@ getusername()
 def getpassword():
     return "ujjwal_Thakur@123"
 getpassword()
+
+if __name__ == "__main__":
+    main()
+
+
+def webapp():
+    pass
+
+
+i = 2  # defined outside
+
+
+def whatsapp(a):
+
+    if i in a:
+        print("add")
+    else:
+        print("not found")
+
+
+# Example global variable 'i'
+i = 2
+
+whatsapp([1, 2, 3])  # Output: add
+
+
+def main():
+    print("=== Dummy App Login ===")
+    email = input("Enter email: ")
+    password = input("Enter password: ")
+
+    if login(email, password):
+        if users_db[email]["role"] == "admin":
+            admin_panel()
+        else:
+            list_products()
+            print("[INFO] You can view "
+                  "products, but you don’t have admin rights.")
+    else:
+        print("[EXIT] Login failed. Exiting...")
+
+
+
+
+
