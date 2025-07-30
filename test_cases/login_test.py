@@ -136,9 +136,7 @@ whatsapp([1, 2, 3])  # Output: add
 # Date: 24 March 2025
 # Method Name : Post Method
 
-import pytest
-from automation_api_vms.conftest import *
-from automation_api_vms.utils.api_client import APIClient
+
 
 
 # EndPoint Used In below Methods
