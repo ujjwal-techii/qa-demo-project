@@ -132,9 +132,21 @@ i = 2
 
 whatsapp([1, 2, 3])  # Output: add
 
-# Created :Haseeb Mehraj
-# Date: 24 March 2025
-# Method Name : Post Method
+
+def main():
+    print("=== Dummy App Login ===")
+    email = input("Enter email: ")
+    password = input("Enter password: ")
+
+    if login(email, password):
+        if users_db[email]["role"] == "admin":
+            admin_panel()
+        else:
+            list_products()
+            print("[INFO] You can view "
+                  "products, but you don’t have admin rights.")
+    else:
+        print("[EXIT] Login failed. Exiting...")
 
 
 
