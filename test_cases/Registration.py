@@ -51,6 +51,10 @@ def initiate_call(self, other_user):
             self.end_call(other_user)
 
 
+def end_call(self, other_user):
+
+
+
 # ------------------------------
 # Run the simulation
 # ------------------------------
