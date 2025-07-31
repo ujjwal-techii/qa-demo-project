@@ -47,7 +47,7 @@ def login(email, password):
 
 # --------------------- PRODUCT MANAGEMENT ---------
 products = [
-    {"id": 101, "name": "Laptop", "price": 65000},
+    {"id": 101, "name": "Laptop", "price": 65000},]
 
 
 
@@ -114,9 +114,7 @@ def getusername():
     return "ujjwal_Thakur"
 getusername()
 
-def getpassword():
-    return "ujjwal_Thakur@123"
-getpassword()
+
 
 if __name__ == "__main__":
     main()
