@@ -175,6 +175,8 @@ print ("new code start ")
 def reverse_string(s):
     return s[::-1]
 
+reverse_string("Automation")
+
 
 
 
