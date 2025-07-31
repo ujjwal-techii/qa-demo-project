@@ -172,5 +172,10 @@ print ("new code start ")
 
 
 
+def reverse_string(s):
+    return s[::-1]
+
+
+
 
 
