@@ -44,11 +44,7 @@ class User:
         self.name = name
         self.in_call = False
 
-    def initiate_call(self, other_user):
-        session = CallSession(self, other_user)
-        if session.start_call():
-            time.sleep(2)  # Simulate 2-second call
-            session.end_call()
+
 
 # ------------------------------
 # Run the simulation
