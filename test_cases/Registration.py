@@ -37,12 +37,7 @@ class CallSession:
         print(f"📞 Call started at {self.start_time.strftime('%H:%M:%S')}")
         return True
 
-    def end_call(self):
-        self.end_time = datetime.now()
-        self.caller.in_call = False
-        self.receiver.in_call = False
-        duration = (self.end_time - self.start_time).seconds
-        print(f"📴 Call ended at {self.end_time.strftime('%H:%M:%S')}. Duration: {duration} seconds.")
+
 
 class User:
     def __init__(self, name):
