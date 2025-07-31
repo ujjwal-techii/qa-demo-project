@@ -10,16 +10,7 @@ class User:
         else:
             print(f"{other_user.name} is already on another call.")
 
-    def receive_call(self, from_user):
-        print(f"{self.name} received a call from {from_user.name}.")
-        self.in_call = True
-        from_user.in_call = True
-        print(f"Call started between {self.name} and {from_user.name}.")
 
-    def end_call(self, other_user):
-        print(f"{self.name} ended the call with {other_user.name}.")
-        self.in_call = False
-        other_user.in_call = False
 
 # Example usage
 if __name__ == "__main__":
