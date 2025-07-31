@@ -43,7 +43,12 @@ class User:
     def __init__(self, name):
         self.name = name
         self.in_call = False
-
+def initiate_call(self, other_user):
+        print(f"{self.name} is trying to call {other_user.name}...")
+        call_session = CallSession(self, other_user)
+        if call_session.start_call():
+            time.sleep(2)  # Simulate call duration
+            self.end_call(other_user)
 
 
 # ------------------------------
