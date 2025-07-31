@@ -48,9 +48,7 @@ def login(email, password):
 # --------------------- PRODUCT MANAGEMENT ---------
 products = [
     {"id": 101, "name": "Laptop", "price": 65000},
-    {"id": 102, "name": "Mouse", "price": 700},
-    {"id": 103, "name": "Keyboard", "price": 1500},
-    {"id": 104, "name": "Monitor", "price": 12000},]
+
 
 
 def list_products():
